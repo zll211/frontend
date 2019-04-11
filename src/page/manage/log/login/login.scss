@@ -1,0 +1,13 @@
+@import "../../../../style/variables";
+
+.log-page {
+  // padding: 47px 52px 65px;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+  .refresh {
+    .icon {
+      color: $_pm-fail-color;
+    }
+  }
+}

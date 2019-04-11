@@ -1,0 +1,91 @@
+@import "../../../../style/variables";
+
+.report-page {
+  .print-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: #01d0b0;
+    margin-right: 5px;
+  }
+  .export-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: rgb(255,176,3);
+    margin-right: 5px;
+  }
+  .send-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: #01d0b0;
+    margin-right: 5px;
+  }
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .edit-user {
+    color: $_pm-default-table-color;
+    cursor: pointer;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .delete-user {
+    @extend .edit-user;
+    margin-left: 35px;
+    &:hover {
+      color: $_pm-fail-color;
+    }
+  }
+  .el-pagination{
+    padding: 20px 0;
+    //background-color: #ffffff;
+    .el-pager li,.btn-prev,.btn-next{
+      color: #969696;
+      background-color: #ffffff;
+      border-radius: 6px;
+      border: 1px solid rgb(226,226,226);
+      font-weight: 500;
+    }
+  }
+  .pdf-dialog {
+    .el-dialog{
+      display: flex;
+      flex-direction: column;
+      .el-dialog__body {
+        flex: 1;
+      }
+    }
+  }
+  .el-button + .el-button{
+    margin-left: 0 !important;
+  }
+  .borrow-pro-text{
+    margin: 20px 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cccccc;
+    font-weight: bolder;
+    p{
+      text-align: center;
+    }
+  }
+  .borrow-con-text{
+    margin: 15px 0 0 12px;
+    p{
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+  .pathology-id{
+    color: #01d0b0;
+    cursor: pointer;
+    text-decoration: none !important;
+    &:hover{
+      text-decoration: underline !important;
+    }
+  }
+}
+
+

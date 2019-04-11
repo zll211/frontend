@@ -1,0 +1,136 @@
+@import "../../../../style/variables";
+
+.borrow-page{
+  .edit-specimen {
+    color: $_pm-default-table-color;
+    cursor: pointer;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .delete-specimen {
+    @extend .edit-specimen;
+    margin-left: 35px;
+    &:hover {
+      color: $_pm-fail-color;
+    }
+  }
+  .borrow-list-table{
+    width: 60%;
+    float: left;
+    margin-right: 2%;
+    // background-color: #ffffff;
+    margin-top: 15px;
+    .el-pagination{
+      margin: 0 auto;
+      padding: 20px 0;
+      .el-pager li,.btn-prev,.btn-next{
+        color: #969696;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgb(226,226,226);
+        font-weight: 500;
+      }
+    }
+    .el-tabs{
+      width: 353px;
+      .el-tabs__header{
+        margin: 0;
+      }
+    }
+  }
+  .borrow-pro-table{
+    width: 38%;
+    float: left;
+    //background-color: #ffffff;
+    margin-top: 15px;
+    .el-pagination{
+      margin: 0 auto;
+      padding: 20px 0;
+      .el-pager li,.btn-prev,.btn-next{
+        color: #969696;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgb(226,226,226);
+        font-weight: 500;
+      }
+    }
+    .el-tabs{
+      width: 353px;
+      .el-tabs__header{
+        margin: 0;
+      }
+    }
+  }
+  .normal-specimen-search{
+    margin: 35px 0 0 0;
+    height: auto;
+    .specimen-search-input{
+      width: 400px;
+    }
+  }
+  .buttonGroup{
+    margin: 35px 25px;
+    a{
+      color: #ffffff;
+    }
+  }
+  .cancel-collect-btn{
+    cursor: pointer;
+    &:hover i{
+      color: rgb(255,176,3);;
+    }
+  }
+  .borrow-btn-icon{
+    font-size: 32px;
+    color: $_pm-base-color;
+  }
+  .return-btn-icon{
+    font-size: 32px;
+    color: rgb(255,176,3);
+  }
+  .view-icon{
+    font-size: 30px;
+    color: rgb(255,176,3);
+  }
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .borrow-pro-form{
+    .el-date-editor{
+      width: 100%;
+    }
+  }
+  .borrow-pro-text{
+    margin: 20px 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cccccc;
+    font-weight: bolder;
+    p{
+      text-align: center;
+    }
+  }
+  .borrow-con-text{
+    margin: 15px 0 0 12px;
+    p{
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+  .borrow-btn{
+    color: #01d0b0;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .borrow-btn:hover{
+    color: rgba(1,208,176,.8);
+  }
+  .set-total {
+    color: $_pm-default-light-color;
+    font-size: 14px;
+    padding: 30px 0;
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../../../style/variables";
+
+.logistics-page {
+  .func-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: #01d0b0;
+    margin-right: 5px;
+  }
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .logistics-table{
+    .el-pagination{
+      padding: 20px 0;
+      .el-pager li,.btn-prev,.btn-next{
+        color: #969696;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgb(226,226,226);
+        font-weight: 500;
+      }
+    }
+    .el-tabs__header{
+      margin: 0;
+    }
+  }
+  .view {
+    color: $_pm-default-table-color;
+    cursor: pointer;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .ensure {
+    @extend .view;
+    margin-left: 25px;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .send-logistics-form {
+    background-color: rgb(255,255,255);
+    padding: 25px 10px;
+    margin: 0 10px;
+    position: relative;
+    .short-input{
+      width: 80%;
+    }
+    .add-btn {
+      cursor: pointer;
+      margin-left: 100px;
+      .el-button--mini{
+        padding: 2px;
+        i{
+          font-size: 16px;
+          font-weight: 800;
+        }
+      }
+      .add_text{
+        margin-left: 10px;
+        font-size: 14px;
+        color: rgb(111,111,111);
+      }
+    }
+    .el-form-item{
+      margin-bottom: 25px;
+    }
+    .el-form-item__label{
+      width: 80px !important;
+      padding: 0 !important;
+    }
+  }
+  .logistics-detail{
+    margin: 15px 0 ;
+  }
+  .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(216,216,216);
+  }
+  .row-line{
+    width: 220px;
+    height: 2px;
+    background: rgb(216,216,216);
+    margin: 4px;
+  }
+  .logistics-detail-dialog .el-dialog--center .el-dialog__body{
+    height: 400px;
+  }
+  .logistics-route{
+    width: 500px;
+    margin: 60px auto;
+    font-size: 16px;
+  }
+  .logistics-route-block{
+    position: relative;
+    .logistics-route-top{
+      min-width: 300px;
+      position: absolute;
+      top: -30px;
+      left:-16px;
+    }
+    .logistics-route-bottom{
+      width: 50px;
+      position: absolute;
+      bottom: -30px;
+      left: -16px;
+      color: rgb(216,216,216);
+    }
+  }
+  .active .dot{
+    background-color: #01d0b0;
+  }
+  .active .logistics-route-bottom{
+    color: #01d0b0;
+  }
+  /*.active .logistics-route-top{
+    color: #01d0b0;
+  }*/
+}
+
+

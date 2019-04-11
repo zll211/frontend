@@ -1,0 +1,36 @@
+@import "../../../../style/variables";
+
+.role-page {
+  .operate-methods {
+    margin: 0 0 43px;
+  }
+
+  .delete-dialog-title {
+    color: $_pm-default-dark-color;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0 0 7px 0;
+  }
+
+  .delete-dialog-content {
+    color: $_pm-default-table-color;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .filter-text {
+    margin: 0 0 20px;
+  }
+  .filter-tree {
+    background-color: #fff;
+    color: $_pm-tree-color;
+    font-size: 14px;
+    max-height: 350px;
+    overflow-y: scroll;
+    .el-tree-node__content {
+      height: 46px;
+    }
+  }
+
+}
+
+

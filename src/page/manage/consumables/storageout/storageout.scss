@@ -1,0 +1,27 @@
+@import "../../../../style/variables";
+
+.storageout-page{
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .el-icon-plus{
+    font-size: 32px;
+    color: $_pm-base-color;
+  }
+  .el-icon-download {
+    font-size: 32px;
+    color: rgb(255,176,3);
+  }
+  .choose-materials-dialog{
+    .pis-title{
+      margin-bottom: 10px;
+    }
+  }
+  .el-dialog--center .el-dialog__body{
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+}

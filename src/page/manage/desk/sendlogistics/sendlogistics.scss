@@ -1,0 +1,139 @@
+@import "../../../../style/variables";
+
+.send-logistics-page {
+  position: relative;
+  .el-form-item__error{
+    top:-30px;
+    left: unset;
+    right: 20%;
+  }
+  .left-area{
+  }
+  .right-area{
+
+  }
+  .el-tabs {
+    .el-tabs__nav-scroll {
+      background-color: #ffffff;
+    }
+    .el-tabs__nav {
+      margin-left: 20px;
+    }
+    .el-tabs__item {
+      font-size: 16px;
+      padding: 0 20px;
+      height: 50px;
+      line-height: 48px;
+    }
+    .el-tabs__content {
+      padding: 0 0 15px 10px;
+    }
+  }
+  .return-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  .send-logistics-form {
+    background-color: rgb(255,255,255);
+    padding: 25px 10px;
+    margin: 0 10px;
+    position: relative;
+    .short-input{
+      width: 80%;
+    }
+    .add-btn {
+      cursor: pointer;
+      margin-left: 100px;
+      .el-button--mini{
+        padding: 2px;
+        i{
+          font-size: 16px;
+          font-weight: 800;
+        }
+      }
+      .add_text{
+        margin-left: 10px;
+        font-size: 14px;
+        color: rgb(111,111,111);
+      }
+    }
+    .el-form-item{
+      margin-bottom: 25px;
+    }
+    .el-form-item__label{
+      width: 80px !important;
+      padding: 0 !important;
+    }
+  }
+  .handle-btn{
+    margin-top: 40px;
+    .el-button{
+      padding: 10px 35px;
+      margin-right: 20px;
+    }
+  }
+  .send-logistics-table{
+    margin: 0 20px;
+    min-height: 410px;
+    background-color: #ffffff;
+    .el-table {
+      color: $_pm-default-table-color;
+      & thead {
+        color: $_pm-default-dark-color;
+      }
+      th.is-leaf,td {
+        border-bottom: 1px solid $_pm-default-table-line-color;
+      }
+      &:before{
+        height: 0;
+      }
+    }
+    .el-pagination{
+      padding: 20px 0;
+      .el-pager li,.btn-prev,.btn-next{
+        color: #969696;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgb(226,226,226);
+        font-weight: 500;
+      }
+    }
+    .send {
+      color: $_pm-default-table-color;
+      cursor: pointer;
+      &:hover {
+        color: $_pm-base-color;
+      }
+    }
+    .delete {
+      @extend .send;
+      margin-left: 25px;
+      &:hover {
+        color: $_pm-fail-color;
+      }
+    }
+  }
+  .el-transfer-panel{
+    width: 400px;
+  }
+  .el-transfer-panel__body{
+    height: 500px;
+  }
+  .el-transfer-panel__list.is-filterable{
+    height: 480px;
+  }
+  .transfer-footer {
+    margin-left: 10px;
+    padding: 6px 5px;
+  }
+  .logistics-dialog{
+    .el-form-item{
+      margin-bottom: 5px;
+    }
+    .el-form-item__label{
+      padding: 0 10px !important;
+      line-height: 32px !important;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../../style/variables";
+.storage-page{
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .el-icon-plus,.el-icon-goods,.el-icon-sold-out{
+    font-size: 32px;
+    color: $_pm-base-color;
+  }
+  .el-icon-download {
+    font-size: 32px;
+    color: rgb(255,176,3);
+  }
+  .el-pagination {
+    padding: 20px 0;
+  }
+  .pis-title{
+    margin-bottom: 15px;
+  }
+  .handle-record{
+    .el-pagination{
+      padding: 20px 0 0 0;
+    }
+    .main-container .el-pagination{
+      padding: 0;
+    }
+  }
+  .addAssetsDialog{
+    .el-dialog--center .el-dialog__body{
+      height: 500px;
+      overflow-y: scroll;
+    }
+  }
+}

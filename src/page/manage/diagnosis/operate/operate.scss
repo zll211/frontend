@@ -1,0 +1,210 @@
+@import "../../../../style/variables";
+
+.doperate-page {
+  position: relative;
+  padding: 30px 0 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1000px;
+  .doperate-child-page {
+    margin: 50px auto 0;
+    min-width: 1000px;
+    width: 60%;
+  }
+  .fixed-head {
+    position: fixed;
+    top: 40px;
+    min-width: 1000px;
+    width: 60%;
+    margin: 0 auto;
+    background: #f8f8f8;
+    z-index: 2;
+    height: 60px;
+  }
+
+  .back-icon {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px 0 0;
+    box-sizing: border-box;
+    i {
+      font-size: 24px;
+      color: $_pm-base-color;
+    }
+  }
+  .nav-top{
+    .el-tabs__header {
+      margin: 0;
+      border: none;
+    }
+    .el-tabs--card > .el-tabs__header {
+
+    }
+    .el-tabs__nav {
+      border: none !important;
+      .el-tabs__item {
+        padding: 0 15px;
+        border: none !important;
+        color: $_pm-default-table-color;
+        &:hover {
+          color: $_pm-base-color;
+        }
+        &.is-active {
+          background: linear-gradient(90deg, rgba(1, 207, 177, 1), rgba(1, 208, 176, 1));
+          border-radius: 18px;
+          color: #fff;
+          height: 36px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+  .info-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 22px 22px 0;
+    border-radius: 6px;
+  }
+  .info-title {
+    font-size: 16px !important;
+    color: $_pm-tree-color;
+    .el-form-item__content {
+      line-height: 1;
+    }
+    hr {
+      height: 2px;
+      background-color: $_pm-base-color;
+      width: 44px;
+      border: none;
+      margin: 10px 0 0 6px;
+    }
+  }
+  .el-textarea.is-disabled .el-textarea__inner {
+    background-color: #fff;
+    color: $_pm-default-table-color;
+  }
+  .el-input.is-disabled .el-input__inner {
+    background-color: #fff;
+    color: $_pm-default-table-color;
+  }
+
+  .specimen-img-container {
+    .el-form-item__content{
+      line-height: 0;
+      img{
+        margin: 0 5px;
+        border: 1px dashed #dddddd;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .specimen-name {
+    font-size: 16px;
+    color: $_pm-base-color;
+  }
+
+  .el-dialog__header {
+    border-bottom: 1px solid $_pm-default-border-color;
+  }
+  .close-dialog {
+    color: $_pm-fail-color;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .report {
+    padding: 15px 0;
+  }
+  .margin-bottom-default {
+    margin: 0 0 10px;
+  }
+  .operate-dialog-header {
+    label {
+      margin: 0 15px 0 0;
+      color: $_pm-default-table-color;
+      .header-title {
+        color: $_pm-tree-color;
+      }
+    }
+  }
+  .pdf-dialog {
+    .el-dialog {
+      display: flex;
+      flex-direction: column;
+      .el-dialog__header {
+        padding: 10px 20px;
+        padding-bottom: 0;
+      }
+      .el-dialog__body {
+        flex: 1;
+        padding: 0 20px 30px 20px;
+        .el-form-item {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .pis-title {
+    margin-bottom: 10px;
+  }
+  .advice-content {
+    padding: 10px;
+    min-height: 117px;
+    height: 117px;
+    color: $_pm-default-table-color;
+    cursor: not-allowed;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    .el-tag {
+      margin: 5px 10px;
+    }
+  }
+  /*.pis-slide-view {
+    margin-top: 45px;
+  }*/
+  .takespecimen-template{
+    border:1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    .el-form-item{
+      margin: 20px 0;
+    }
+    .specimen-name-input{
+      width: 300px;
+    }
+  }
+  .follow {
+    margin-right: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    color: #999999;
+    font-size: 24px;
+  }
+  .followed {
+    margin-right: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(255, 176, 3);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .doperate-page {
+    min-width: 900px;
+    .fixed-head {
+      min-width: 900px;
+    }
+    .doperate-child-page {
+      min-width: 900px;
+    }
+  }
+}
+
+

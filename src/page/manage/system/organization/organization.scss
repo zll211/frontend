@@ -1,0 +1,56 @@
+@import "../../../../style/variables";
+
+.organization-page{
+  padding: 49px 52px;
+  .tree-page {
+    margin: 28px 0 0;
+    padding: 36px 31px;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  .operate-methods {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    .add-btn {
+      cursor: pointer;
+      .el-button--mini {
+        background: $_pm-base-color;
+        border: none;
+        border-radius: 4px;
+        font-size: 17px;
+        height: 29px;
+        margin: 0 14px 0 0;
+        padding: 0;
+        width: 29px;
+        i {
+          color: #fff;
+        }
+      }
+    }
+    .delete-btn {
+      @extend .add-btn;
+      margin: 0 0 0 39px;
+      .el-button--mini {
+        background: $_pm-fail-color;
+      }
+    }
+  }
+  .filter-text{
+    margin: 20px 0;
+  }
+  .filter-tree{
+    background-color: #fff;
+    color: $_pm-tree-color;
+    font-size: 14px;
+    .el-tree-node__content{
+      height: 46px;
+    }
+  }
+  .el-input {
+    width: 300px;
+  }
+  .el-textarea {
+    width: 450px;
+  }
+}

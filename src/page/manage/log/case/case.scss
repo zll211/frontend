@@ -1,0 +1,23 @@
+@import "../../../../style/variables";
+
+.log-page {
+  // padding: 47px 52px 65px;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+  .log-case-main {
+    min-height: 100px;
+    .log-case-item {
+      padding: 10px 0;
+      margin: 0 0 10px;
+      color: $_pm-default-color;
+      background: #fff;
+      .case-header {
+        padding: 0 50px;
+      }
+      .el-steps{
+        padding: 10px 0;
+      }
+    }
+  }
+}

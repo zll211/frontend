@@ -1,0 +1,34 @@
+@import "../../../../style/variables";
+
+.storagenum-page{
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .el-icon-plus{
+    font-size: 32px;
+    color: $_pm-base-color;
+  }
+  .el-icon-download {
+    font-size: 32px;
+    color: rgb(255,176,3);
+  }
+  .choose-materials-dialog{
+    .pis-title{
+      margin-bottom: 10px;
+    }
+  }
+  .el-dialog--center .el-dialog__body{
+    max-height: 550px;
+    overflow-y: scroll;
+    .pis-tab{
+      padding: 0;
+    }
+    .el-pagination{
+      padding: 20px 0 0 0;
+    }
+  }
+
+}

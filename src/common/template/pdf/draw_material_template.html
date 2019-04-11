@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>取材工作单</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 100%;
+			height: 100%;
+		}
+		.clear{
+			clear: both;
+		}
+		#dmResultListContainer{
+			width: 660px;
+			margin: 50px auto;
+			border: 1px solid #000;
+			font-size: 14px;
+		}
+		#dmResultList{
+			text-align: center;
+			border-bottom: 1px solid #000;
+			padding: 5px 0;
+		}
+		#baseInfo{
+			width: 100%;
+			height: 105px;
+			border-bottom: 1px solid #000; 
+		}
+		#baseInfoList{
+			width: 630px;
+			margin: 0 auto;
+			list-style: none;
+			padding: 10px 0;
+		}
+		#baseInfoList li, #footerItemList li{
+			width: 210px;
+			float: left;
+			margin: 5px 0;
+		}
+		#specimenImg{
+			padding: 10px 15px;
+			border-bottom: 1px solid #000;
+		}
+		#specimenImg img{
+			margin: 5px;
+		}
+		#specimenInfo{
+			border-bottom: 1px solid #000;
+		}
+		.specimenInfoList{
+			list-style: none;
+			padding: 10px 15px;
+		}
+		.specimenInfoList li{
+			margin: 5px 0;
+		}
+		.blockHead{
+			padding: 5px 0;
+			border-bottom: 1px dashed #000;
+		}
+		.blockHead, .blockInfo {
+			width: 100%;
+			text-align: center;
+		}
+		.blockIndex{
+			width: 10%;
+			display:inline-block;
+		}
+		.blockName{
+			width: 35%;
+			display:inline-block;
+		}
+		.blockPart{
+			width: 25%;
+			display:inline-block;
+		}
+		.blockNum{
+			width: 10%;
+			display:inline-block;
+		}
+		.blockRemark{
+			width: 20%;
+			display:inline-block;
+		}
+		#footer{
+			width: 100%;
+			height: 30px;
+			padding: 10px 15px;
+		}
+		#footerItemList {
+			list-style: none;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dmResultListContainer">
+		<h3 id="dmResultList">取材工作单</h3>
+		<div id="baseInfo">
+			<ul id="baseInfoList">
+				<li>病理号：<span id="pathologyId">B20181111001</span></li>
+				<li>病理类型：<span id="baseInfoCaseType">常规</span></li>
+				<li>&nbsp;</li>
+				<li>姓名：<span id="baseInfoName">张华</span></li>
+				<li>年龄：<span id="baseInfoAge">36岁</span></li>
+				<li>性别：<span id="baseInfoGender">男</span></li>
+				<li>送检医院：<span id="baseInfoInspectionHospital">余姚人民医院</span></li>
+				<li>送检科室：<span id="baseInfoInspectionDepartment">消化内科</span></li>
+				<li>送检时间：<span id="baseInfoInspectionDate">2018-11-11 11:11:11</span></li>
+				<li class="clear"></li>
+			</ul>
+		</div>
+		<div id="specimenImg">
+			<p>取材图像：</p>
+			<img src="timeoutIcon.png" width="120" height="120">
+			<img src="timeoutIcon.png" width="120" height="120">
+		</div>
+		<div id="specimenInfo">
+			<ul class="specimenInfoList">
+				<li id="specimen1"><h4>标本1</h4></li>
+				<li>标本名称： <span id="specimenName1">乳腺/乳腺/肿块切除</span></li>
+				<li>巨检描述： <span id="specimenGI1">（局部切除）灰白间灰黄色不规则组织一块，大小为0.1cm×0.1cm×0.2cm，切面呈灰白间灰黄色，其中可见一结节状/不规则肿物，大小为0.3cm×0.3cm×1cm，边界清楚/不清，包膜完整/不完整，肿物切面呈实性/囊性/囊实性，灰白/灰红/灰黑/灰黄色/红褐色，质地软/中等/硬/韧/骨样硬/脆，囊内容灰白/灰红/灰黑/灰黄色/红褐色澄清/粘稠/混浊液体。</span></li>
+				<li class="blockHead"><span class="blockIndex">蜡块序号</span><span class="blockName">取材名称</span><span class="blockPart">取材部位</span><span class="blockNum">材块数量</span><span class="blockRemark">补充描述</span></li>
+				<li class="blockInfo"><span class="blockIndex">1</span><span class="blockName">乳腺/乳腺/肿块切除</span><span class="blockPart">左侧 - 乳腺</span><span class="blockNum">1</span><span class="blockRemark">zzzzzz</span></li>
+			</ul>
+			<!-- <ul class="specimenInfoList">
+				<li id="specimen1"><h4>标本2</h4></li>
+				<li>标本名称： <span id="specimenName1">乳腺/乳腺/肿块切除</span></li>
+				<li>巨检描述： <span id="specimenGI1">（局部切除）灰白间灰黄色不规则组织一块，大小为0.1cm×0.1cm×0.2cm，切面呈灰白间灰黄色，其中可见一结节状/不规则肿物，大小为0.3cm×0.3cm×1cm，边界清楚/不清，包膜完整/不完整，肿物切面呈实性/囊性/囊实性，灰白/灰红/灰黑/灰黄色/红褐色，质地软/中等/硬/韧/骨样硬/脆，囊内容灰白/灰红/灰黑/灰黄色/红褐色澄清/粘稠/混浊液体。</span></li>
+				<li class="blockHead"><span class="blockIndex">蜡块序号</span><span class="blockName">取材名称</span><span class="blockPart">取材部位</span><span class="blockNum">材块数量</span><span class="blockRemark">补充描述</span></li>
+				<li class="blockInfo"><span class="blockIndex">1</span><span class="blockName">乳腺/乳腺/肿块切除</span><span class="blockPart">左侧 - 乳腺</span><span class="blockNum">1</span><span class="blockRemark">zzzzzz</span></li>
+				<li class="blockInfo"><span class="blockIndex">2</span><span class="blockName">乳腺/乳腺/肿块切除</span><span class="blockPart">左侧 - 乳腺</span><span class="blockNum">1</span><span class="blockRemark">zzzzzz</span></li>
+			</ul> -->
+		</div>
+		<div id="footer">
+			<ul id="footerItemList">
+				<li id="recorder">记录员：<span>谷雨</span></li>
+				<li id="recorder">取材医生：<span>夏至</span></li>
+				<li id="recorder">取材时间：<span>2018-11-11 11:11:11</span></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

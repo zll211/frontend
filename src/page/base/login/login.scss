@@ -1,0 +1,211 @@
+@import "../../../style/variables";
+
+h3{
+  font-size: 18px;
+  color: $_pm-default-dark-color;
+}
+.loginWrapper{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251,251,251);
+}
+.loginContainer{
+  width: 1187px;
+  height: 100%;
+  margin: 0 auto;
+  .carousel{
+    .el-carousel__indicators{
+      bottom: 0;
+      .el-carousel__button{
+        background-color: #ccc;
+      }
+    }
+  }
+}
+header{
+  padding-top: 6%;
+  p.right a{
+    font-size: 18px;
+    margin-left: 38px;
+    color: $_pm-default-table-color;
+  }
+}
+.content{
+  padding-top: 1%;
+  position: relative;
+}
+.carousel{
+  width: 1087px;
+  background-color: rgb(255,255,255);
+  padding-bottom: 40px;
+}
+.el-carousel{
+  padding-top: 10%;
+  padding-left: 8%;
+  width:513px;
+  img{
+    width: 100%;
+  }
+}
+.loginBox{
+  width: 450px;
+  /*height: 76%;*/
+  position: absolute;
+  right: 0;
+  top: 65px;
+  background-color: rgb(255,255,255);
+  border-radius: 10px;
+  box-shadow:0 0 52px 0 rgba(0,0,0,0.04);
+  .hospitalLogo{
+    width: 72px;
+    height: 72px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    margin-left: -36px;
+    text-align: center;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 72px;
+    }
+  }
+  .hospitalName{
+    margin-top: 50px;
+    text-align: center;
+  }
+  .el-form{
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 10px;
+    .el-form-item{
+      text-align: left;
+      .el-button{
+        width:100%;
+        margin: 5px auto;
+      }
+      .el-button:first-child{
+        margin-top: 15px;
+      }
+      .el-button:last-child{
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .el-form-item__error{
+    top:-30px;
+    left: unset;
+    right: 5px;
+  }
+  .el-form-item__label{
+    padding: 0;
+  }
+  .el-input__inner{
+    border-radius: 20px;
+  }
+  .forget-password{
+    color: #606266;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover{
+      color: $_pm-base-color;
+    }
+  }
+}
+.el-button--primary.is-plain{
+  border-radius: 20px;
+  background: #fff;
+}
+.el-carousel__container{
+  height: 419px;
+}
+footer{
+  text-align: center;
+  margin-top: 5%;
+  p{
+    color: $_pm-default-table-color;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1367px){
+  header {
+    padding-top: 3%;
+  }
+  .carousel{
+    padding-bottom: 20px;
+  }
+  .el-carousel {
+    padding-top: 8%;
+    padding-left: 15%;
+    width: 413px;
+  }
+  .el-carousel__container{
+    height: 334px;
+  }
+  .loginBox{
+    top: 50px;
+    .hospitalLogo{
+      width: 64px;
+      height: 64px;
+      top: -32px;
+      margin-left: -32px;
+      img{
+        width: 100%;
+        height: 64px;
+      }
+    }
+    .hospitalName{
+      margin-top: 40px;
+      text-align: center;
+    }
+    .el-form{
+      margin-top: 5px;
+      .el-form-item{
+        margin-bottom: 5px;
+        .el-button{
+          margin: 5px auto;
+        }
+        .el-button:first-child{
+          margin-top: 10px;
+        }
+        .el-button:last-child{
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1188px) {
+  header{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .loginContainer{
+    width: 100%;
+  }
+  .carousel{
+    display: none;
+  }
+  .loginBox{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    .hospitalName{
+      padding-top: 50px
+    }
+    .el-form{
+      .el-form-item{
+        .el-button:last-child{
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.loginBox input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}

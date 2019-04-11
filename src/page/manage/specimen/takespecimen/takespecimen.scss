@@ -1,0 +1,182 @@
+@import "../../../../style/variables";
+$breakpoints: (
+  'sm': 'only screen and ( max-width: 1101px)',
+  'md': 'only screen and ( max-width: 1367px)',
+) !default;
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+
+.takespecimen-page {
+  position: relative;
+  width: 1350px;
+  margin: 0 auto;
+  @include respond-to(md) {
+    width: 1170px;
+  }
+  @include respond-to(sm) {
+    width: 970px;
+  }
+  .takespecimen{
+    width: 980px;
+    min-height: 800px;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    @include respond-to(md) {
+      width: 800px;
+    }
+    @include respond-to(sm) {
+      width: 710px;
+    }
+    .base-information{
+      .el-button{
+        margin-left: 20px;
+      }
+    }
+    .takespecimen-template{
+      border:1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      .el-icon-menu{
+        font-size: 24px;
+        color: #01d0b0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+      .check-text{
+        margin: 30px 0;
+        .el-textarea__inner{
+          min-height: 80px !important;
+        }
+      }
+      .specimen-name-input{
+        width: 300px;
+      }
+    }
+    .el-dialog .el-checkbox{
+      margin-left: 0;
+      margin-bottom: 10px;
+      display: block;
+      .el-checkbox__label{
+        white-space:pre-wrap;
+        display: inline;
+        line-height: 24px;
+      }
+    }
+    .paraffin-form-head{
+      padding: 20px 0;
+      border-bottom: 1px dashed rgb(226,226,226);
+    }
+    .paraffin-form-body{
+      margin: 10px 0;
+    }
+    .takespecimen-record{
+      margin: 50px 0 20px 0;
+    }
+  }
+  .el-upload--picture-card{
+    line-height: 1;
+  }
+  .el-upload-dragger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 146px;
+    width: auto;
+    border: none;
+  }
+  .save-button-group{
+    margin: 10px 20px;
+  }
+  .takespecimen-table{
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 4px;
+    .el-table{
+      width: 330px;
+      @include respond-to(sm) {
+        width: 230px;
+      }
+    }
+    .takespecimen-search-input{
+      width: 330px;
+      @include respond-to(sm) {
+        width: 230px;
+      }
+    }
+    .el-tabs{
+      width: 330px;
+      @include respond-to(sm) {
+        width: 230px;
+      }
+      .el-tabs__header{
+        margin: 0;
+      }
+    }
+    .pathology-id{
+      cursor: pointer;
+      color: #01d0b0;
+      text-decoration: none !important;
+      &:hover{
+        text-decoration: underline !important;
+      }
+    }
+  }
+  .active-button{
+    border-bottom: 2px solid #01d0b0;
+    border-radius: 0;
+  }
+  hr{
+    width: 100%;
+    margin: 0 auto 20px;
+    border: none;
+    border-top: 1px solid rgb(226,226,226);
+  }
+  .uploadImg{
+    position: relative;
+    .el-upload-list__item{
+      height: 112px;
+    }
+    .el-upload--picture-card{
+      width: 0;
+      height: 0;
+      border: none;
+      position: absolute;
+      right: 110px;
+    }
+    .get-video-btn{
+      position: absolute;
+      right: 5px;
+      top: 40px;
+    }
+    .screen-shot-btn{
+      position: absolute;
+      right: 5px;
+      top: 80px;
+    }
+  }
+  .el-input-number--small{
+    @include respond-to(md) {
+      width: 100px;
+    }
+  }
+  .el-form-item{
+    margin-bottom: 0;
+  }
+}
+
+

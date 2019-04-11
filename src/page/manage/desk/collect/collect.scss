@@ -1,0 +1,50 @@
+@import "../../../../style/variables";
+
+.collect-page{
+  .edit-specimen {
+    color: $_pm-default-table-color;
+    cursor: pointer;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .export-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: rgb(255,176,3);
+  }
+  .refresh-text {
+    color: $_pm-default-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 11px;
+  }
+  .delete-specimen {
+    @extend .edit-specimen;
+    margin-left: 35px;
+    &:hover {
+      color: $_pm-fail-color;
+    }
+  }
+  .normal-specimen-table{
+    .pathology-id{
+      color: #01d0b0;
+      cursor: pointer;
+      text-decoration: none !important;
+      &:hover{
+        text-decoration: underline !important;
+      }
+    }
+    .el-pagination{
+      margin: 0 auto;
+      padding: 20px 0;
+      .el-pager li,.btn-prev,.btn-next{
+        color: #969696;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgb(226,226,226);
+        font-weight: 500;
+      }
+    }
+  }
+}

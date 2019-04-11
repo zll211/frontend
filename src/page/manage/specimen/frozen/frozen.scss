@@ -1,0 +1,47 @@
+@import "../../../../style/variables";
+
+.normal-specimen-page{
+  .edit-specimen {
+    color: $_pm-default-table-color;
+    cursor: pointer;
+    &:hover {
+      color: $_pm-base-color;
+    }
+  }
+  .delete-specimen {
+    @extend .edit-specimen;
+    margin-left: 35px;
+    &:hover {
+      color: $_pm-fail-color;
+    }
+  }
+  .normal-specimen-table{
+    background-color: #ffffff;
+    margin-top: 15px;
+  }
+  .normal-specimen-search{
+    margin: 35px 0 15px 0;
+    height: auto;
+    .specimen-search-input{
+      width: 400px;
+    }
+  }
+  .buttonGroup{
+    margin: 35px 25px;
+    a{
+      color: #ffffff;
+    }
+  }
+  .spec-btn-icon{
+    font-size: 32px;
+    vertical-align: middle;
+    color: #01d0b0;
+    margin-right: 5px;
+  }
+  .spec-btn-text{
+    color: #6f6f6f;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 8px;
+  }
+}

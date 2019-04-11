@@ -1,0 +1,44 @@
+@import "../../../../style/variables";
+
+.slice-bind {
+  .label-image {
+    width: 100px;
+    height: 100px;
+  }
+  .preview-image {
+    flex: 1;
+    height: 100px;
+  }
+  .bind-dialog {
+    .el-dialog__body {
+      max-height: 500px;
+      overflow-y: scroll;
+      .current-head {
+        font-size: 16px;
+      }
+      padding: 10px 20px;
+      /*.el-checkbox{
+        margin: 0 20px 0 0;
+      }*/
+      .scan-image-item {
+        margin: 0 0 10px;
+      }
+      .el-pagination {
+        padding: 10px 0 0;
+      }
+    }
+  }
+  .bind-kfb-view {
+    & > .el-dialog {
+      display: flex;
+      flex-direction: column;
+      .el-dialog__header {
+        padding: 10px 20px;
+      }
+      .el-dialog__body {
+        flex: 1;
+        padding: 0;
+      }
+    }
+  }
+}

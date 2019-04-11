@@ -1,0 +1,259 @@
+@import "../../../../style/variables";
+
+$breakpoints: (
+  'xs': 'only screen and ( max-width: 1090px)',
+  'sm': 'only screen and ( max-width: 1180px)',
+  'md': 'only screen and ( max-width: 1228px)',
+) !default;
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+
+.register-page {
+  width: 1250px;
+  margin: 0 auto;
+  position: relative;
+  @include respond-to(md) {
+    width: 1100px;
+  }
+  @include respond-to(sm) {
+    width: 1040px;
+  }
+  @include respond-to(xs) {
+    width: 965px;
+  }
+  .el-input-group__append{
+    padding: 0 10px !important;
+    .refreshIcon{
+      font-size: 16px;
+    }
+  }
+  .choose-type-radio{
+    position: absolute;
+    top: 18px;
+    left: 500px;
+    @include respond-to(md) {
+      left: 435px;
+    }
+    @include respond-to(xs) {
+      left: 410px;
+    }
+    .el-radio__label{
+      padding-left: 5px;
+    }
+    .el-radio + .el-radio {
+      margin-left: 10px;
+    }
+  }
+  .register{
+    .register-head{
+      width: 900px;
+      position: absolute;
+      height: 50px;
+      background-color: #ffffff;
+      z-index: 99;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      @include respond-to(md) {
+        width: 800px;
+      }
+      @include respond-to(xs) {
+        width: 730px;
+      }
+      .el-button-group{
+        margin-top: 5px;
+        .el-button{
+          margin: 0 10px;
+          font-size: 14px;
+          color: #555555;
+        }
+      }
+      .el-tabs{
+        float: left;
+        .el-tabs__item{
+          padding: 5px 20px 10px;
+          height: 50px;
+        }
+      }
+      h3{
+        width: 70px;
+        margin: 0 auto;
+        line-height: 50px;
+        letter-spacing:2px
+      }
+      button.right{
+        margin-top: -42px;
+        margin-right: 10px;
+      }
+      button.reset-register-btn,button.delete-register-btn{
+        margin-right: 100px;
+      }
+    }
+    .register-block{
+      margin-top: 10px;
+      background-color: #ffffff;
+      padding: 10px 10px 15px 10px;
+      border-radius: 5px;
+      position: relative;
+      .down-icon{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+      }
+      .top-title{
+        width: 70px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        p{
+          text-align: center;
+          font-size: 16px;
+          color:rgba(34,34,34,1);
+          font-weight: bolder;
+        }
+        .blue-line {
+          width: 40px;
+          margin: 8px auto;
+          height: 2px;
+          background-color: #01d0b0;
+        }
+      }
+    }
+    .register-form {
+      margin-top:50px;
+      padding: 20px 0 0 0;
+      position: absolute;
+      width: 900px;
+      @include respond-to(md) {
+        width: 800px;
+      }
+      @include respond-to(xs) {
+        width: 730px;
+      }
+      .el-form-item{
+        margin-bottom: 10px !important;
+      }
+      .pathology-id-item{
+        /*width: 250px;*/
+        margin-bottom: 0px !important;
+      }
+      .el-form-item__label {
+        width: 80px !important;
+      }
+      .el-form-item__content {
+        margin-left: 80px !important;
+      }
+      .el-date-editor.el-input, .el-cascader {
+        width: 100%;
+      }
+      .add-specimen-btn {
+        margin: 15px 0 20px 15px;
+      }
+      .specimenNormalList li{
+        margin: 10px 0;
+      }
+      .specimenCellList li{
+        margin: 10px 0;
+      }
+      .longLabel {
+        .el-form-item__label{
+          width: 120px !important;
+        }
+        .el-form-item__content{
+          margin-left: 120px !important;
+        }
+      }
+      /*.input-for-female{
+        .el-form-item__content{
+          margin-left: 0 !important;
+          width: 140px;
+        }
+      }*/
+      .radio-for-female{
+        .el-form-item__content{
+          margin-left: 2px !important;
+          width: 70px;
+        }
+      }
+      .el-radio + .el-radio{
+        margin-left: 10px;
+      }
+    }
+  }
+  .register-table{
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 4px;
+    right: 0;
+    .el-table{
+      width: 328px;
+      @include respond-to(md) {
+        width: 280px;
+      }
+      @include respond-to(sm) {
+        width: 230px;
+      }
+    }
+    .register-table-header {
+      background-color: #01d0b0;
+    }
+    .register-search-input {
+      width: 330px;
+      @include respond-to(md) {
+        width: 280px;
+      }
+      @include respond-to(sm) {
+        width: 230px;
+      }
+    }
+  }
+  hr {
+    width: 95%;
+    margin: 0 auto 20px;
+    border: none;
+    border-top: 1px solid rgb(226, 226, 226);
+  }
+  .paraffin-form-head, .paraffin-form-body {
+    margin-left: 10px !important;
+    padding: 5px 0;
+  }
+  .paraffin-form-head {
+    padding: 15px 0;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 10px;
+  }
+  .cascader-input {
+   position: absolute;
+    width: 218px;
+    z-index: 2;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 15px;
+    color: #606266;
+    @include respond-to(md) {
+      width: 190px;
+    }
+    @include respond-to(xs) {
+      width: 170px;
+    }
+  }
+  .el-button+.el-button{
+    margin-left: 0;
+  }
+  .el-dialog--center .el-dialog__body{
+    padding: 15px 15px 20px;
+  }
+}
+
+
+
+

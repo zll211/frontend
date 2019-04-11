@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>维修单</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+    }
+    .clear{
+      clear: both;
+    }
+    .wrapper{
+      width: 85%;
+      margin: 50px auto;
+    }
+    .title{
+      text-align: center;
+    }
+    .base-info {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    .base-info p {
+      float: left;
+      margin: 0 10px;
+    }
+    .content{
+      margin: 10px 10px;
+    }
+    th{
+      font-size: 16px;
+      padding: 1px 5px;
+    }
+    td{
+      font-size: 14px;
+      padding: 1px 5px;
+    }
+    .footer{
+      float: right;
+      margin-top: 50px;
+      margin-right: 100px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <h3 class="title">资产维修单</h3>
+  <p style="margin: 10px 10px 0;float: right;font-size: 14px">维修单号：WX2018110101</p>
+  <div class="clear"></div>
+  <hr style="margin: 5px 10px 10px;border-color: #333">
+  <div class="base-info">
+    <p>报修人：<span id="maintain_name">黄晓明</span></p>
+    <p>维修费用：<span id="maintain_expense">111.00元</span></p>
+    <p>送修时间：<span id="maintain_at">2018-11-13 15:55:24</span></p>
+  </div>
+  <div class="clear"></div>
+  <p class="content">维修内容：<span id="maintain_content">温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了温度过高，要炸掉了</span></p>
+  <p class="content">备注：<span id="remark">温度过高，要炸掉了</span></p>
+  <p class="content">维修资产列表：</p>
+  <table border="1" cellspacing="0" class="content">
+    <tr>
+      <th>资产条码</th>
+      <th>资产名称</th>
+      <th>资产类别</th>
+      <th>规格型号</th>
+      <th>SN号</th>
+      <th>购入时间</th>
+      <th>维保到期时间</th>
+    </tr>
+    <tr class="assetsList">
+      <td class="assets_id">SE8158392</td>
+      <td class="assets_name">封片机1号</td>
+      <td class="assets_type">封片机器</td>
+      <td class="assets_model">MSD2301</td>
+      <td class="assets_sn">SN23002349</td>
+      <td class="buy_at">2018-08-28</td>
+      <td class="assets_end_at">2019-10-01</td>
+    </tr>
+  </table>
+  <div class="footer">
+    <p>签名：  </p>
+  </div>
+</div>
+</body>
+</html>

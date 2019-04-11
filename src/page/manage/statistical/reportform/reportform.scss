@@ -1,0 +1,23 @@
+.report-form {
+  .chart-main {
+    margin: 10px;
+    min-width: 500px;
+    height: 500px;
+    background: #fff;
+  }
+  .form-item {
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+  .report-form-type-chart {
+    width: 100%;
+    height: 100%;
+  }
+  .report-form-from-chart {
+    @extend .report-form-type-chart;
+  }
+  .report-form-time-chart {
+    @extend .report-form-type-chart;
+  }
+}
+

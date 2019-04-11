@@ -1,0 +1,123 @@
+@import "../../../style/variables";
+$breakpoints: (
+  'md': 'only screen and ( max-width: 1200px)',
+) !default;
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+.home-page{
+  font-family:PingFangSC-Regular;
+  .top-selection{
+    background-color: #ffffff;
+    border-radius: 8px;
+    .doctor-info{
+      margin: 45px 0;
+      border-right: 2px solid rgb(218,218,218);
+      .doctor-name{
+        font-size: 16px;
+        color: rgb(34,34,34);
+        line-height: 32px;
+      }
+      .doctor-organization,.login-time{
+        font-size: 12px;
+        color: rgb(151,151,151);
+        line-height: 24px;
+      }
+      .doctor-role{
+        font-size: 14px;
+        color: rgb(1,208,176);
+        line-height: 28px;
+      }
+    }
+    .todo-list{
+      margin: 0 60px;
+      @include respond-to(md) {
+       padding: 15px 0;
+      }
+      .todo-item{
+        cursor: pointer;
+      }
+      .todo-list-text{
+        font-size:16px;
+        color:rgba(151,151,151,1);
+        line-height:32px;
+      }
+      .todo-list-number{
+        font-size:24px;
+        color:rgba(34,34,34,1);
+        line-height:24px;
+      }
+    }
+    .collect{
+      cursor: pointer;
+      padding: 44px 0;
+      border-left: 2px solid rgb(218,218,218);
+      @include respond-to(md) {
+        border-left: none;
+      }
+      .collect-text{
+        font-size:18px;
+        color:rgba(151,151,151,1);
+        line-height:36px;
+      }
+    }
+  }
+  .timeout-list{
+    .timeout-item{
+      cursor: pointer;
+      width: 23%;
+      @include respond-to(md) {
+        width: 46%;
+        &:first-child{
+          margin-bottom: 15px;
+        }
+      }
+      height: 120px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      img.timeout-item-content{
+        margin-left:40px;
+      }
+      div.timeout-item-content{
+        margin-right:40px;
+      }
+      .routine-timeout-number{
+        font-size:32px;
+        color:rgba(87,187,237,1);
+      }
+      .frozen-timeout-number{
+        font-size:32px;
+        color:rgba(249,161,63,1);
+      }
+      .cell-timeout-number{
+        font-size:32px;
+        color:rgba(246,123,107,1);
+      }
+      .other-timeout-number{
+        font-size:32px;
+        color:rgba(116,192,128,1);
+      }
+      .timeout-type{
+        font-size:16px;
+        color:rgba(151,151,151,1);
+      }
+    }
+  }
+  .chart-main{
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+}
+.main-container{
+  @include respond-to(md) {
+    min-width: 830px;
+  }
+}

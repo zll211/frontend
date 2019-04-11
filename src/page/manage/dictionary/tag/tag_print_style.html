@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>标签打印模版</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#tag-wrapper{
+			width: 180px;
+			height: 180px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -90px;
+			margin-top: -90px;
+			text-align: center;
+		}
+		#pathology-id, #production-id{
+			font-weight: 600;
+		}
+		#hospital-name{
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div id="tag-wrapper">
+		<p id="pathology-id">B20180912001</p>
+		<p id="production-id">#01</p>
+		<p id="dyeing-name">HE</p>
+		<img src="http://tool.oschina.net/action/qrcode/generate?data=B20180912001%2301&output=image%2Fjpeg&error=L&type=0&margin=0&size=4" id="qrcord" width="65" />
+		<p id="hospital-name">江丰生物病理中心</p>
+	</div>
+</body>
+</html>

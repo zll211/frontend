@@ -1,0 +1,25 @@
+@import "../../../../style/variables";
+
+.dic-base-page {
+  .el-tabs--card > .el-tabs__header {
+    border: none;
+  }
+  .el-tabs__nav {
+    border: none !important;
+    .el-tabs__item {
+      border: none !important;
+      color: $_pm-default-table-color;
+      &:hover {
+        color: $_pm-base-color;
+      }
+      &.is-active {
+        background: linear-gradient(90deg, rgba(1, 207, 177, 1), rgba(1, 208, 176, 1));
+        border-radius: 21px;
+        color: #fff;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+
+}
